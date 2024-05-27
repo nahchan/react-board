@@ -1,0 +1,71 @@
+.grid-c7-content {
+    margin-top: -42px;
+    margin-bottom: -128px;
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+
+    .progress-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .percent {
+            position: relative;
+
+            svg {
+                position: relative;
+                width: 210px;
+                height: 210px;
+                transform: rotate(-99deg);
+
+                circle {
+                    width: 100%;
+                    height: 100%;
+                    fill: none;
+                    stroke: var(--clr-jet);
+                    stroke-width: 20;
+                    stroke-linecap: round;
+                }
+
+                circle:last-of-type {
+                    stroke-dasharray: 600px;
+                    stroke-dashoffset: calc(625px - (600px * var(--percent))/168);
+                    stroke: var(--clr-pumpkin);
+                }
+
+            }
+        }
+
+        .number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            h3 {
+                font-weight: 200;
+                font-size: 20px;
+                font-weight: 500;
+
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .data-list {
+        margin-left: -20px;
+
+        .data-item {
+            margin-bottom: 20px;
+        }
+
+        .data-item-value {
+            margin-top: 8px;
+            display: block;
+            font-weight: 600;
+        }
+    }
+}
